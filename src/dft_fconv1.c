@@ -22,8 +22,6 @@ void dft_fconv1(const double complex *x, const double complex *h, double complex
 
 	y[0] = x[0] * creal(h[N/2]) - conj(x[0]) * cimag(h[N/2]);
 
-	printf("%f %f\n", creal(h[N/2]), cimag(h[N/2]));
-
 	for (unsigned int k = 1; k < N/2; k++) {
 		w0 = 0.5 * (1 - sin( 2 * M_PI * k / N));
 		w1 = 0.5 * (1 + sin( 2 * M_PI * k / N));
